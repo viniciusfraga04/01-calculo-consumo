@@ -1,20 +1,59 @@
-<h1>aula vinicíus</h1>
-<h3>alcool e gasolina</h3>
-
-<script>
-    function numeros_inteiros(arredonde){
-        return Math.round(arredonde)
-    }
-
-    var litros = 20;
-    var CaminhoGasolina = 22;
-    var consumo = CaminhoGasolina / litros
-    var caminhoComAlcool = 500
-
-    document.write('o consumo de gasolina é ' + numeros_inteiros(consumo) + ' litros por km/l.' + '<br> <br> <br>')
-
-consumo = caminhoComAlcool / litros
-
-document.write('o consumo de alcool é ' + consumo + ' litros por km/l' + '<br>')
-</script>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpont" content="width=device-width, initial-scale=1.0">
+    <title>TESTE</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .fundo{
+                height: 100vh;
+                text-align: center;
+        }
+        .alterar{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 15px;
+            padding: 15px;
+        }
+        .botao{
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form action="/action_page.php"></form>
+    <div class="fundo">
+    <div class="alterar">
+        <table>
+            <tr>
+                <td rowspan="2"><select id="carro" style="width: 200px;" class = 'botao'><option value="https://www.saab.com/">Saab</option>
+                    <option value="https://www.volvo.com/">Volvo</option>
+                    <option value="https://www.mercedes-benz.com/">Mercedes</option>
+                    <option value="https://www.audi.com/">Audi</option>
+                </select></td>
+                <label for="cars">Selecione o carro:</label>
+                <br><br><br>
+            </tr>
+        </table>
+        <br><br><br><br><br><br><br>
+        <button class="botao-selecionar" onclick="redirecionar()">SELECIONAR</button>
+    </div>
+</div>
+        <script>
+            function redirecionar() {
+                const select = document.getElementById('carro');
+                const url = select.value;
+                window.location.href = url;
+            }
+        </script>
+</body>
+</html>
